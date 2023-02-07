@@ -1,0 +1,165 @@
+/*table*/
+h2.allc {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+td, thead th{
+    text-align: center;
+    width: min-content;
+    min-height: max-content;
+    padding: 3px;
+}
+table tr:nth-of-type(2n) {
+    border-bottom: 1px solid black;
+    background-color: #a2a2a2;
+}
+
+table tr:nth-of-type(2n+1) {
+    border-bottom: 1px solid black;
+}
+
+
+main{
+    background-color: rgba(255, 255, 255, 0.93);
+}
+
+
+/*cart of cocktail*/
+
+* {
+    box-sizing: border-box;
+}
+.cocktail {
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+
+}
+.border {
+    width: 210px;
+    margin: 0 auto 0.5rem auto;
+    background: white;
+    padding: 10px;
+
+
+}
+.wrap {
+    height: 320px;
+    position: relative;
+}
+.product-wrap {
+    position: relative;
+
+}
+/*rgba(73, 102, 162, .5);*/
+.product-wrap:after {
+    content: '';
+    background: rgba(73, 102, 162, .5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    transform: scale(.3);
+    transition: .3s ease-in-out;
+}
+
+.border:hover .product-wrap:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.border:hover .maincockteil:after {
+    opacity: 0;
+    transform: scale(1);
+}
+
+.product-wrap a {
+    display: block;
+    text-decoration: none;
+
+}
+.product-wrap img {
+    display: block;
+    width: 100%;
+    height: 290px;
+
+}
+.loop-action {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: .3s ease-in-out;
+}
+.border:hover .loop-action {
+    opacity: 1;
+}
+.loop-action a {
+    text-decoration: none;
+    display: block;
+    border: 1px solid white;
+    white-space: nowrap;
+    text-transform: uppercase;
+    padding: .5em 1em;
+    font-size: 14px;
+    line-height: 1.6;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    min-width: 160px;
+    margin: 3px auto;
+    transition: .3s ease-in-out;
+}
+.loop-action a:after {
+    content: '';
+    position: absolute;
+    left: -220%;
+    top: -500%;
+    width: 140%;
+    height: 1000%;
+    transform: rotate(45deg);
+    background: white;
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+.loop-action a:hover {
+    color: black;
+}
+.loop-action a:hover:after {
+    left: 0%;
+}
+.border:hover {
+    border-color: #4966A2;
+}
+.product-info {
+    padding-top: 5px;
+}
+.stars {
+    font-size: 1rem;
+    font-family: "Open Sans";
+    color: red;
+
+}
+
+.product-title {
+    font-weight: bold;
+    font-family: "Open Sans";
+    color: #162546;
+    font-size: 16px;
+}
+.price {
+    font-family: "Open Sans";
+    color: #162546;
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+
